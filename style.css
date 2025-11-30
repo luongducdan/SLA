@@ -1,0 +1,54 @@
+/* Cập nhật bảng màu cho Light Mode với tông Xám đậm */
+:root {
+    --color-primary: #1e293b; /* Slate 800 (Màu xám đậm chủ đạo) */
+    --color-secondary: #2563eb; /* Blue 600 */
+    --color-background: #f1f5f9; /* Slate 100 (Xám nhạt) */
+    --color-card: #ffffff; /* White (Trắng) */
+    --color-card-secondary: #f8fafc; /* Slate 50 */
+    --color-text-dark: #1e293b; /* Slate 800 (Chữ đen/xám đậm) */
+    --color-text-dim: #64748b; /* Slate 500 (Chữ xám) */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+}
+/* Custom scrollbar cho giao diện sáng */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* Slate 300 */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* Slate 400 */
+}
+/* Style cho sidebar cố định */
+#sidebar {
+    background-color: var(--color-card);
+    border-right: 1px solid #e2e8f0;
+}
+.sidebar-link {
+    color: var(--color-text-dark);
+}
+.sidebar-link.active, .sidebar-link:hover {
+    color: var(--color-primary); /* Màu xám đậm */
+    background-color: #e2e8f0; /* Slate 200 */
+    border-left: 4px solid var(--color-primary); /* Viền xám đậm */
+}
+.accordion-header {
+    background-color: var(--color-card-secondary);
+    border: 1px solid var(--color-primary); /* Viền xám đậm */
+    color: var(--color-text-dark);
+    transition: background-color 0.2s, transform 0.2s;
+}
+.accordion-header:hover {
+    background-color: #f0f4f8; 
+}
+.progress-bar-fill {
+    transition: width 1s ease-out;
+    /* Cập nhật gradient sang tông xám đậm */
+    background: linear-gradient(to right, #475569, #1e293b); 
+    box-shadow: 0 4px 6px -1px rgba(30, 41, 59, 0.1), 0 2px 4px -2px rgba(30, 41, 59, 0.06); /* Đổ bóng xám đậm */
+}
